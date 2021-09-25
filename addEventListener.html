@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event Listener</title>
+</head>
+<body>
+    <h1>Learning Add Event Listener</h1>
+    <button id="bg-btn">Click Me To Change the backgroundColor</button>
+    <button id="clr-btn">Click me to change the color</button>
+    <button id="margin-btn">Click me to change the margin</button>
+
+    <script>
+        //first way (change the background color)
+
+        function bgChange() {
+            document.body.style.backgroundColor = "red";
+        }
+        var bgBtn = document.getElementById('bg-btn');
+        bgBtn.onclick = bgChange;
+            document.body.style.backgroundColor = "maroon";
+            
+
+        //second way (change the color)
+        
+        var clrBtn = document.getElementById("clr-btn");
+        clrBtn.addEventListener("click", function(){
+            document.body.style.color = "blue";
+        })
+
+        //Third way (To change the margin)
+      document.getElementById("margin-btn").addEventListener("click", function(){
+          document.body.style.margin = "23px";
+      })
+
+    </script>
+</body>
+</html>
