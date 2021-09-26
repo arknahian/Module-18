@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnClick</title>
+</head>
+<body>
+    <h1>Explained Onclick</h1>
+    <button onclick="alert('hello world');">Click Me</button>
+    <button onclick= "clickHandler()">click me 2</button>
+    <button id="bg-btn">Click to Change the background-color</button>
+
+    <button id="another">Add Event Listener</button>
+
+    <button id="clr">Click to change the font color</button>
+    <script>
+        function clickHandler() {
+            console.log("someone clicked me");
+        }
+        var anotherBtn = document.getElementById('another');
+        anotherBtn.addEventListener("click", function() {
+            alert("This is another button");
+        })
+
+        document.getElementById("bg-btn").addEventListener("click", function(){
+            document.body.style.backgroundColor = "cyan";
+        })
+
+        function changeColor(){
+            document.body.style.color = "maroon";
+        }
+        document.getElementById("clr").addEventListener("click", function() {
+            changeColor();
+        })
+    </script>
+
+</body>
+</html>
