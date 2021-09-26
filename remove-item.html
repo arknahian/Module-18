@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Item</title>
+</head>
+<body>
+    <h1>My List</h1>
+    <ul id="my-list">
+        <li>list -1</li>
+        <li>list -2</li>
+        <li>list -3</li>
+        <li>list -4</li>
+        <li>list -5</li>
+        <li>list -6</li>
+        <li>list -7</li>
+        <li>list -8</li>
+    </ul>
+    <button id="add-new">add new element</button>
+    <script>
+        // var lists = document.querySelectorAll("li");
+        // for (let i = 0; i < lists.length; i++) {
+        //     const element = lists[i];
+        //     element.addEventListener("click", function(event){
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+
+        var myList = document.getElementById("my-list");
+        console.log(parentNode.childNode(this));
+
+
+
+        var addNewBtn = document.getElementById("add-new");
+        addNewBtn.addEventListener("click", function(){
+            var ul = document.querySelector("ul");
+            var newElement = document.createElement("li");
+            newElement.innerText = "New Item";
+            ul.appendChild(newElement);
+        })
+    </script>
+</body>
+</html>
